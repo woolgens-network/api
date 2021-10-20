@@ -1,7 +1,7 @@
 ---
 kind: pipeline
 type: docker
-name: Java Maven CI/CD
+name: Java Maven Deploy
 
 trigger:
   branch:
