@@ -25,4 +25,5 @@ steps:
   - name: deploy
     image: maven
     commands:
+      - cat settings.xml
       - mvn deploy -B -s settings.xml
