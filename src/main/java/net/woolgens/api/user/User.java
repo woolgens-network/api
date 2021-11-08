@@ -2,7 +2,6 @@ package net.woolgens.api.user;
 
 import net.woolgens.api.user.data.UserData;
 
-import java.util.concurrent.CompletableFuture;
 
 /**
  * Copyright (c) Maga, All Rights Reserved
@@ -19,16 +18,5 @@ public interface User {
      */
     UserData getData();
 
-    /**
-     * Save user sync
-     *
-     */
-    User save();
 
-    /**
-     * Save user async
-     *
-     * @param queue
-     */
-    CompletableFuture<User> saveAsync(boolean queue);
 }

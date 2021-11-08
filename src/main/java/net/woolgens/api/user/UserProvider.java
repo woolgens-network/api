@@ -78,4 +78,17 @@ public interface UserProvider<T extends User> {
      */
     boolean existsUserByUUID(UUID uuid);
 
+    /**
+     * Save user sync
+     *
+     */
+    T save(T user);
+
+    /**
+     * Save user async
+     *
+     * @param queue
+     */
+    CompletableFuture<T> saveAsync(T user, boolean queue);
+
 }
