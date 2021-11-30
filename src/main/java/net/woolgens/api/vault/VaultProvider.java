@@ -19,4 +19,7 @@ public interface VaultProvider {
      * @return = secret
      */
     String getSecret(String category, String key);
+
+
+
 }
