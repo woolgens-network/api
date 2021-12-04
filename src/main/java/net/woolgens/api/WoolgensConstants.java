@@ -8,5 +8,5 @@ package net.woolgens.api;
  **/
 public final class WoolgensConstants {
 
-    public static final String PREFIX = "§f§lWool§c§lGens §8→ §7";
+    public static final String PREFIX = "§8<§c§lWOOLGENS§8> §7";
 }
