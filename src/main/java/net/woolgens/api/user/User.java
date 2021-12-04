@@ -1,5 +1,6 @@
 package net.woolgens.api.user;
 
+import net.woolgens.api.user.data.SeasonData;
 import net.woolgens.api.user.data.UserData;
 
 
@@ -17,6 +18,14 @@ public interface User {
      * @return = {@link UserData}
      */
     UserData getData();
+
+
+    /**
+     * Get current season data
+     *
+     * @return = {@link SeasonData}
+     */
+    SeasonData getSeasonData();
 
 
 }
