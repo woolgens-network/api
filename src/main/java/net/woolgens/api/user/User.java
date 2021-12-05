@@ -42,6 +42,13 @@ public interface User {
     long getExpToNextLevel();
 
     /**
+     * Get colored level (depends on level)
+     *
+     * @return
+     */
+    String getColoredLevel();
+
+    /**
      * Wait for a given time (timestamp) (non-blocking)
      *
      * @param key
