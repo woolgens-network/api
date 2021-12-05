@@ -28,6 +28,29 @@ public interface User {
     SeasonData getSeasonData();
 
     /**
+     * Add exp
+     *
+     * @param exp
+     */
+    void addExp(long exp);
+
+    /**
+     * Get exp to next level
+     *
+     * @return
+     */
+    long getExpToNextLevel();
+
+    /**
+     * Wait for a given time (timestamp) (non-blocking)
+     *
+     * @param key
+     * @param millis
+     * @return
+     */
+    boolean wait(String key, long millis);
+
+    /**
      * Set a local cached key-value tag
      *
      * @param key
@@ -58,5 +81,8 @@ public interface User {
      * @return
      */
     boolean containsTag(String key);
+
+
+
 
 }
