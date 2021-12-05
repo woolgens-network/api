@@ -4,6 +4,8 @@ import net.woolgens.api.WoolgensProvider;
 import org.bukkit.Location;
 import org.bukkit.Material;
 
+import java.util.Collection;
+
 @WoolgensProvider
 public interface WarpProvider {
 
@@ -14,7 +16,7 @@ public interface WarpProvider {
      * @param display
      * @param material
      */
-    void setWarp(String key, String display, Material material);
+    void setWarp(String key, String display, Material material, Location location);
 
     /**
      * Remove a warp by the given key
@@ -46,5 +48,6 @@ public interface WarpProvider {
      * @return
      */
     Location getWarpLocation(String key);
+
 
 }

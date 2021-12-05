@@ -27,5 +27,36 @@ public interface User {
      */
     SeasonData getSeasonData();
 
+    /**
+     * Set a local cached key-value tag
+     *
+     * @param key
+     * @param value
+     */
+    void setTag(String key, Object value);
+
+    /**
+     * Remove a tag
+     *
+     * @param key
+     */
+    void removeTag(String key);
+
+    /**
+     * Get a tag by key
+     *
+     * @param key
+     * @param <T>
+     * @return
+     */
+    <T> T getTag(String key);
+
+    /**
+     * Check if a tag exists
+     *
+     * @param key
+     * @return
+     */
+    boolean containsTag(String key);
 
 }
