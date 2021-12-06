@@ -10,10 +10,6 @@ trigger:
     - push
 
 steps:
-  - name: testing
-    image: maven
-    commands:
-      - mvn test
   - name: settings
     image: md5lukas/drone-mvn-settings
     settings:
@@ -22,6 +18,11 @@ steps:
           username: woolgens-default
       serverSecrets:
         from_secret: MAVEN_SERVER_SECRETS
+  - name: testing
+    depends_on: [settings]
+    image: maven
+    commands:
+      - mvn test
   - name: deploy
     image: maven
     commands:

@@ -14,7 +14,8 @@ import lombok.Getter;
 public enum UserSettings {
 
     SIDEBAR(true),
-    CLEARLAG_MESSAGES(true);
+    CLEARLAG_MESSAGES(true),
+    CRATE_ANIMATION(true);
 
     private final Object defaultValue;
 }
