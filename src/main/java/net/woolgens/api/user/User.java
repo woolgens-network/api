@@ -2,6 +2,7 @@ package net.woolgens.api.user;
 
 import net.woolgens.api.user.data.SeasonData;
 import net.woolgens.api.user.data.UserData;
+import net.woolgens.api.user.data.UserSettings;
 
 
 /**
@@ -26,6 +27,33 @@ public interface User {
      * @return = {@link SeasonData}
      */
     SeasonData getSeasonData();
+
+
+    /**
+     * Set settings by {@link UserSettings} with the given value
+     *
+     * @param setting
+     * @param value
+     */
+    void setSetting(UserSettings setting, Object value);
+
+    /**
+     * Get setting generic
+     *
+     * @param settings {@link UserSettings}
+     * @param <T>
+     * @return
+     */
+    <T> T getSetting(UserSettings settings);
+
+    /**
+     * Get setting with the boolean type (casted to boolean)
+     *
+     * @param settings {@link UserSettings}
+     * @return
+     */
+    boolean isSetting(UserSettings settings);
+
 
     /**
      * Add exp
@@ -88,6 +116,7 @@ public interface User {
      * @return
      */
     boolean containsTag(String key);
+
 
 
 
