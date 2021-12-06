@@ -22,7 +22,7 @@ steps:
     depends_on: [settings]
     image: maven
     commands:
-      - mvn test
+      - mvn test -B -s settings.xml
   - name: deploy
     image: maven
     commands:
