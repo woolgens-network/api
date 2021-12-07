@@ -12,6 +12,21 @@ import org.bukkit.Location;
 @WoolgensProvider
 public interface RegionProvider {
 
-    boolean isInRegion(Location location, String name);
+    /**
+     * Check if a region exists with the given id
+     *
+     * @param id
+     * @return
+     */
+    boolean existsRegionById(String id);
+
+    /**
+     * Check if location is in region
+     *
+     * @param location
+     * @param name
+     * @return
+     */
+    boolean isInRegion(Location location, String id);
 
 }
