@@ -52,5 +52,13 @@ public interface QuestProvider {
      */
     Collection<Quest> getQuests();
 
+    /**
+     * Get sum of all objective's max progress
+     *
+     * @param id
+     * @return
+     */
+    long getNeededQuestProgress(String id);
+
 
 }

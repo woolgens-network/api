@@ -66,14 +66,7 @@ public interface QuestUserProvider<U extends User> {
      */
     long getQuestOverallProgress(U user, String id);
 
-    /**
-     * Get sum of all objective's max progress
-     *
-     * @param user
-     * @param id
-     * @return
-     */
-    long getNeededQuestProgress(U user, String id);
+
 
     /**
      * Progress the selected quest with the given id and objectiveId
