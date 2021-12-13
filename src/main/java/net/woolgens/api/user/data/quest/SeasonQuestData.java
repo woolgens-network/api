@@ -14,6 +14,6 @@ import java.util.Set;
 @Data
 public class SeasonQuestData {
 
-    private Map<String, Map<String, SeasonQuestSelectData>> selected;
+    private Map<String, SeasonQuestSelectData> selected;
     private Map<String, Long> finished;
 }
