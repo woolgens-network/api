@@ -66,7 +66,14 @@ public interface QuestUserProvider<U extends User> {
      */
     long getQuestOverallProgress(U user, String id);
 
-
+    /**
+     * Check if quest is finished (depended on time)
+     *
+     * @param user
+     * @param id
+     * @return
+     */
+    boolean isQuestFinished(U user, String id);
 
     /**
      * Progress the selected quest with the given id and objectiveId
