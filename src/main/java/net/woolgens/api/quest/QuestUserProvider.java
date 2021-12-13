@@ -37,7 +37,7 @@ public interface QuestUserProvider<U extends User> {
      * @param user
      * @return {@link Quest}
      */
-    Quest unselectAllQuests(U user);
+    void unselectAllQuests(U user);
 
     /**
      * Check if user has quest selected
