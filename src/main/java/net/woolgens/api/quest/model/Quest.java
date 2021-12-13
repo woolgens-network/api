@@ -17,14 +17,16 @@ import java.util.Map;
 public class Quest {
 
     private final String id;
+    private final QuestTimeType timeType;
     private final String category;
 
     private Map<String, QuestObjective> objectives;
     private List<String> rewards;
     private List<QuestRewardListener> listeners;
 
-    public Quest(String id, String category) {
+    public Quest(String id, QuestTimeType timeType, String category) {
         this.id = id;
+        this.timeType = timeType;
         this.category = category;
         this.rewards = new ArrayList<>();
         this.listeners = new ArrayList<>();

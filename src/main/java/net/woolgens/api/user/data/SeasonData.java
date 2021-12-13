@@ -1,6 +1,7 @@
 package net.woolgens.api.user.data;
 
 import lombok.Data;
+import net.woolgens.api.user.data.quest.SeasonQuestData;
 
 import java.util.Map;
 

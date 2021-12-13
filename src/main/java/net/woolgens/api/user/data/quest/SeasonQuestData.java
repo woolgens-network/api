@@ -1,4 +1,4 @@
-package net.woolgens.api.user.data;
+package net.woolgens.api.user.data.quest;
 
 import lombok.Data;
 
@@ -14,6 +14,6 @@ import java.util.Set;
 @Data
 public class SeasonQuestData {
 
-    private Map<String, Map<String, Long>> selected;
-    private Set<String> finished;
+    private Map<String, Map<String, SeasonQuestSelectData>> selected;
+    private Map<String, Long> finished;
 }
