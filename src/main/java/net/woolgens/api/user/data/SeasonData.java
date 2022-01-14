@@ -22,4 +22,5 @@ public class SeasonData {
     private SeasonQuestData quests;
     private Map<String, Long> stats;
     private Map<String, Integer> crates;
+    private Map<String, Object> extensions;
 }
