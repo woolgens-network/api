@@ -1,6 +1,7 @@
 package net.woolgens.api.user.data;
 
 import lombok.Data;
+import net.woolgens.api.user.data.quest.SeasonQuestData;
 
 import java.util.Map;
 
@@ -18,6 +19,8 @@ public class SeasonData {
     private int level;
     private long exp;
 
+    private SeasonQuestData quests;
     private Map<String, Long> stats;
     private Map<String, Integer> crates;
+    private Map<String, Object> extensions;
 }

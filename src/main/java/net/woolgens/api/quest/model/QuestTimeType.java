@@ -1,0 +1,14 @@
+package net.woolgens.api.quest.model;
+
+/**
+ * Copyright (c) Maga, All Rights Reserved
+ * Unauthorized copying of this file, via any medium is strictly prohibited
+ * Proprietary and confidential
+ * Written by Maga
+ **/
+public enum QuestTimeType {
+
+    DAILY,
+    WEEKLY,
+    ONE_TIME;
+}
