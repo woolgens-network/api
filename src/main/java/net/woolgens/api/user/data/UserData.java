@@ -27,6 +27,7 @@ public class UserData {
     private long joined;
     private Map<String, Long> stats;
     private Map<String, Object> settings;
+    private Map<String, Integer> booster;
     private Map<String, Object> extensions;
     //----------------------------------------
 
