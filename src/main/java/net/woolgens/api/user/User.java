@@ -54,6 +54,31 @@ public interface User {
      */
     boolean isSetting(UserSettings settings);
 
+    /**
+     * Set settings by {@link String} with the given value
+     *
+     * @param setting
+     * @param value
+     */
+    void setSetting(String setting, Object value);
+
+    /**
+     * Get setting generic
+     *
+     * @param settings {@link String}
+     * @param <T>
+     * @return
+     */
+    <T> T getSetting(String settings);
+
+    /**
+     * Get setting with the boolean type (casted to boolean)
+     *
+     * @param settings {@link String}
+     * @return
+     */
+    boolean isSetting(String settings);
+
 
     /**
      * Add exp

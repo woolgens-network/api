@@ -3,6 +3,7 @@ package net.woolgens.api.quest;
 import net.woolgens.api.WoolgensProvider;
 import net.woolgens.api.quest.model.Quest;
 import net.woolgens.api.user.User;
+import net.woolgens.api.user.data.quest.SeasonQuestSelectData;
 
 /**
  * Copyright (c) Maga, All Rights Reserved
@@ -86,4 +87,22 @@ public interface QuestUserProvider<U extends User> {
      * @return
      */
     Quest progress(U user, String id, String objectiveId, long progress);
+
+
+    /**
+     * Get the current selected data of the given quest id
+     *
+     * @param user
+     * @param id
+     * @return
+     */
+    SeasonQuestSelectData getSelection(U user, String id);
+
+
+    /**
+     * Remove daily & weekly quests if time is out
+     *
+     * @param user
+     */
+    void reloadQuests(U user);
 }
