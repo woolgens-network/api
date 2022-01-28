@@ -28,4 +28,13 @@ public interface PermissionProvider {
      */
     String getSuffix(Player player);
 
+
+    /**
+     * Get prefix and suffix level format
+     *
+     * @param player
+     * @return
+     */
+    String getFormat(Player player);
+
 }
