@@ -11,5 +11,5 @@ public final class WoolgensConstants {
     public static final String PREFIX = "§8<§c§lWOOLGENS§8> §7";
     public static final String PERMISSION_PREFIX = "woolgens.";
 
-    public static final String CURRENT_SEASON = "1";
+    public static final String CURRENT_SEASON = "2";
 }

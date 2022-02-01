@@ -15,7 +15,8 @@ public enum UserSettings {
 
     SIDEBAR(true),
     CLEARLAG_MESSAGES(true),
-    CRATE_ANIMATION(true);
+    CRATE_ANIMATION(true),
+    BOSSBAR(true);
 
     private final Object defaultValue;
 }
