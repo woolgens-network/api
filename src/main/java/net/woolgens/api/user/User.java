@@ -142,8 +142,29 @@ public interface User {
      */
     boolean containsTag(String key);
 
+    /**
+     * Check if a timestamp is available by time
+     * Saved as a until timestamp
+     *
+     * @param key
+     * @return
+     */
+    boolean isTimestampAvailable(String key);
 
+    /**
+     * Get until timestamp by key
+     *
+     * @param key
+     * @return
+     */
+    long getTimestamp(String key);
 
-
+    /**
+     * Set until timestamp by ket
+     *
+     * @param key
+     * @param until
+     */
+    void setTimestamp(String key, long until);
 
 }
