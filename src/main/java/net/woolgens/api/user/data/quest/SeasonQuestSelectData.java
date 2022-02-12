@@ -13,6 +13,7 @@ import java.util.Map;
 @Data
 public class SeasonQuestSelectData {
 
+    private int state;
     private Map<String, Long> objectives;
     private long timestamp;
 }

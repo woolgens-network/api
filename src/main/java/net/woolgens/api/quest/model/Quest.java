@@ -2,10 +2,7 @@ package net.woolgens.api.quest.model;
 
 import lombok.Data;
 
-import java.util.ArrayList;
-import java.util.LinkedHashMap;
-import java.util.List;
-import java.util.Map;
+import java.util.*;
 
 /**
  * Copyright (c) Maga, All Rights Reserved
@@ -21,7 +18,7 @@ public class Quest {
     private final QuestTimeType timeType;
     private final String category;
 
-    private Map<String, QuestObjective> objectives;
+    private Map<Integer, Map<String, QuestObjective>> objectives;
     private List<String> rewards;
     private List<QuestRewardListener> listeners;
 
@@ -35,6 +32,10 @@ public class Quest {
         this.objectives = new LinkedHashMap<>();
     }
 
+    public int getMaxStates() {
+        return this.objectives.size();
+    }
+
     public Quest addReward(String message) {
         this.rewards.add(message);
         return this;
@@ -45,12 +46,15 @@ public class Quest {
         return this;
     }
 
-    public Quest addObjective(String id, long maxProgress, String message) {
-        return addObjective(new QuestObjective(id, maxProgress, message));
+    public Quest addObjective(int state, String id, long maxProgress, String message) {
+        return addObjective(state, new QuestObjective(id, maxProgress, message));
     }
 
-    public Quest addObjective(QuestObjective objective) {
-        this.objectives.put(objective.getId(), objective);
+    public Quest addObjective(int state, QuestObjective objective) {
+        if(!this.objectives.containsKey(state)) {
+            this.objectives.put(state, new LinkedHashMap<>());
+        }
+        this.objectives.get(state).put(objective.getId(), objective);
         return this;
     }
 }

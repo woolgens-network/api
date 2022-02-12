@@ -11,5 +11,5 @@ import org.bukkit.entity.Player;
  **/
 public interface QuestRewardListener {
 
-    void onReward(User user, Player player);
+    void onReward(Quest quest, User user, Player player);
 }

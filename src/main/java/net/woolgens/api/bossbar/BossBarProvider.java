@@ -11,11 +11,11 @@ import java.util.Collection;
  * Written by Maga
  **/
 @WoolgensProvider
-public interface BossBarProvider<B extends BossBarEntry> {
+public interface BossBarProvider {
 
-    void register(B entry);
+    void register(BossBarEntry entry);
 
-    B getCurrentEntry();
+    BossBarEntry getCurrentEntry();
 
-    Collection<B> getEntries();
+    Collection<BossBarEntry> getEntries();
 }
