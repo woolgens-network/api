@@ -15,6 +15,7 @@ public class WebGroup {
 
     private String id;
     private String name;
+    private String role;
     private String color;
     private Set<String> permissions;
 }
