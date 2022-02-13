@@ -2,6 +2,7 @@ package net.woolgens.api.user.settings;
 
 import lombok.AllArgsConstructor;
 import lombok.Getter;
+import lombok.RequiredArgsConstructor;
 import org.bukkit.inventory.ItemStack;
 
 /**
@@ -10,7 +11,7 @@ import org.bukkit.inventory.ItemStack;
  * Proprietary and confidential
  * Written by Maga
  **/
-@AllArgsConstructor
+@RequiredArgsConstructor
 @Getter
 public class UserSetting {
 
@@ -18,4 +19,11 @@ public class UserSetting {
     private final UserSettingCategory category;
     private final ItemStack icon;
     private final Object defaultValue;
+
+    private UserSettingClick click;
+
+    public UserSetting useClick(UserSettingClick click) {
+        this.click = click;
+        return this;
+    }
 }
