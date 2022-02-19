@@ -3,6 +3,7 @@ package net.woolgens.api.user.data;
 import lombok.Data;
 import lombok.NoArgsConstructor;
 
+import java.util.List;
 import java.util.Map;
 
 /**
@@ -29,6 +30,7 @@ public class UserData {
     private Map<String, Object> settings;
     private Map<String, Integer> booster;
     private Map<String, Object> extensions;
+    private List<Badge> badges;
     //----------------------------------------
 
     private Map<String, SeasonData> seasons;

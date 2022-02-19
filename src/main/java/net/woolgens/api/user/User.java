@@ -1,5 +1,6 @@
 package net.woolgens.api.user;
 
+import net.woolgens.api.user.data.Badge;
 import net.woolgens.api.user.data.SeasonData;
 import net.woolgens.api.user.data.UserData;
 import net.woolgens.api.user.data.UserSettings;
@@ -166,5 +167,35 @@ public interface User {
      * @param until
      */
     void setTimestamp(String key, long until);
+
+    /**
+     * Add a badge (without save)
+     *
+     * @param badge {@link Badge}
+     */
+    void addBadge(Badge badge);
+
+    /**
+     * Remove badge (without save)
+     *
+     * @param badge {@link Badge}
+     */
+    void removeBadge(Badge badge);
+
+    /**
+     * Check if user has badge by title
+     *
+     * @param title
+     * @return
+     */
+    boolean hasBadge(String title);
+
+    /**
+     * Get badge by title
+     *
+     * @param title
+     * @return {@link Badge}
+     */
+    Badge getBadgeByTitle(String title);
 
 }
