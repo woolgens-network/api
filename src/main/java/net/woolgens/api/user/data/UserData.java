@@ -26,6 +26,7 @@ public class UserData {
     //----------------------------------------
     // Global
     private long joined;
+    private long lastJoined;
     private Map<String, Long> stats;
     private Map<String, Object> settings;
     private Map<String, Integer> booster;
