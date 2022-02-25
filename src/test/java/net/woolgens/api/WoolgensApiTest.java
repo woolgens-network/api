@@ -2,6 +2,9 @@ package net.woolgens.api;
 
 import org.junit.Test;
 
+import java.util.ArrayList;
+import java.util.List;
+
 import static org.junit.jupiter.api.Assertions.*;
 
 /**
@@ -18,7 +21,21 @@ public class WoolgensApiTest {
 
         TestProvider provider = WoolgensApi.getProvider(TestProvider.class);
 
+
+        List<Double> randomList = new ArrayList<>();
+
+        for (int i = 0; i < 105; i++) {
+            randomList.add(Math.random());
+        }
+
+        int get = 100;
+
+        List<Double> newList = randomList.size() < 100 ? new ArrayList<>(randomList) : randomList.subList(randomList.size() - get, randomList.size());
+        System.out.println(newList.size());
+
         assertEquals(true, provider.execute());
+
+
     }
 
 

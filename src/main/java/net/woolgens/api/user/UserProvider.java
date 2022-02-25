@@ -91,4 +91,11 @@ public interface UserProvider<T extends User> {
      */
     CompletableFuture<T> saveAsync(T user, boolean queue);
 
+    /**
+     * Get all users count
+     *
+     * @return
+     */
+    long getRegisteredCount();
+
 }
