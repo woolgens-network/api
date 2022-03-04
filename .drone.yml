@@ -14,10 +14,10 @@ steps:
     image: md5lukas/drone-mvn-settings
     settings:
       servers:
-        - id: woolgens-network
-          username: woolgens-default
+        - id: woolgens
+          username: woolgens
       serverSecrets:
-        from_secret: MAVEN_SERVER_SECRETS
+        from_secret: WOOLGENS_NEXUS_CREDENTIALS
   - name: testing
     depends_on: [settings]
     image: maven
